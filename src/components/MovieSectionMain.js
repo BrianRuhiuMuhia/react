@@ -23,7 +23,7 @@ setMovies(data)
     <div className="spinner"></div>
   </div>)
 }
-    return (<main>
+    return (<main className="main">
 
     </main>)
 }

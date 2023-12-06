@@ -1,6 +1,7 @@
+import MovieSectionMain from "./MovieSectionMain"
 export default function HomePage()
 {
     return (<div>
-        HomePage
+        <MovieSectionMain/>
     </div>)
 }
