@@ -1,5 +1,7 @@
 import {useState,useEffect} from 'react'
 import './loader.css'
+import images from './images'
+import Carousel from './Carousel'
 export default function MovieSectionMain()
 {
     const [movies,setMovies]=useState()
@@ -12,7 +14,7 @@ export default function MovieSectionMain()
     useEffect(()=>{
 fetchFromMovieApi().then((data)=>{
 setMovies(data)
-// setIsLoading(false)
+setIsLoading(false)
 },[])
 
     })
@@ -24,6 +26,6 @@ setMovies(data)
   </div>)
 }
     return (<main className="main">
-
+<Carousel images={images} />
     </main>)
 }
