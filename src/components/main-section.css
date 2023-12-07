@@ -1,0 +1,12 @@
+.main{
+    display:flex;
+    flex-direction: column;
+    gap:1em;
+    background-color: rgb(0, 0, 0);
+}
+.main-movie-section{
+display:grid;
+grid-template-columns: auto;
+grid-row: auto;
+gap:2em;
+}
