@@ -1,0 +1,7 @@
+footer{
+    height: 20vh;
+    width:100vw;
+background-color: rgba(0, 0, 0, 0.247);
+    position:sticky;
+    bottom:0;
+}
