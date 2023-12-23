@@ -1,9 +1,17 @@
 let data=undefined
 if(data===undefined)
 {
-    fetchFromMovieApi().then((result)=>{
+    if(localStorage.getItem("data"))
+    {
+        data=JSON.parse(localStorage.getItem("data"))
+        console.log(data)
+    }
+    else{
+         fetchFromMovieApi().then((result)=>{
    data=result
         })
+    }
+   
 }
 async function fetchFromMovieApi()
 {
@@ -19,7 +27,7 @@ async function fetchFromMovieApi()
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result)
+        localStorage.setItem("data",JSON.stringify(result))
         return result
     } catch (error) {
         console.error(error);

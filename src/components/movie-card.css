@@ -8,4 +8,25 @@
 }
 .card span{
     color:black;
+    font-size: 1em;
+}
+.card-view{
+    display:flex;
+    flex-direction: row;
+    padding:1em;
+}
+.card-view img{
+    width:500px;
+    height: 500px;
+}
+.card-detail{
+    display:flex;
+    flex-direction: column;
+    gap:1em;
+    margin-left: 0.5em;
+}
+@media screen and (max-width:900px){
+    .card-view{
+        flex-direction: column;
+    }
 }

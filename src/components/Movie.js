@@ -26,7 +26,7 @@ moviesData.push(movie)
   
 }
     return (
-        <div><MovieCard  overview={pageMovie["overview"]} title={pageMovie['title']} date={pageMovie["release_date"]} image={pageMovie["poster_path"]} genres={pageMovie['genres']} show={true}/>
+        <div className="card-view"><MovieCard  overview={pageMovie["overview"]} title={pageMovie['title']} date={pageMovie["release_date"]} image={pageMovie["poster_path"]} genres={pageMovie['genres']} show={true}/>
             
         </div>
     )
