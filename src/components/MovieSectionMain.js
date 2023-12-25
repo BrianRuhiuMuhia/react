@@ -9,6 +9,9 @@ export default function MovieSectionMain()
 { let movieSections=undefined
     const [movies,setMovies]=useState([])
     const [isLoading,setIsLoading]=useState(true)
+    const [images,setImages]=useState([])
+    const [isImagesLoading,setImagesLoading]=useState(true)
+
     
     useEffect(()=>{
     if(data==undefined)
@@ -30,7 +33,7 @@ else{
 
     },[])
     
-    if(isLoading)
+    if(isLoading && !isImagesLoading)
 {
     return (<div className="page-loader">
     <div className="spinner"></div>
@@ -39,11 +42,11 @@ else{
 if(!isLoading)
 {
     movieSections=movies.map((movie)=>{
-        return <MovieSection title={movie.title} movies={movie.movies}/>
+        return <MovieSection title={movie.title} movies={movie.movies} key={movie['_id']}/>
     })
 }
     return (<main className="main">
-<Carousel images={images} />
+{/* <Carousel images={images}/> */}
 <div className="main-movie-section">
 {movieSections}
 </div>
