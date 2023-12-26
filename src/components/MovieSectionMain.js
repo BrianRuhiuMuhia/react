@@ -9,8 +9,7 @@ export default function MovieSectionMain()
 { let movieSections=undefined
     const [movies,setMovies]=useState([])
     const [isLoading,setIsLoading]=useState(true)
-    const [images,setImages]=useState([])
-    const [isImagesLoading,setImagesLoading]=useState(true)
+
 
     
     useEffect(()=>{
@@ -33,7 +32,7 @@ else{
 
     },[])
     
-    if(isLoading && !isImagesLoading)
+    if(isLoading)
 {
     return (<div className="page-loader">
     <div className="spinner"></div>

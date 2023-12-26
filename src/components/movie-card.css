@@ -16,7 +16,7 @@
     padding:1em;
 }
 .card-view img{
-    width:500px;
+    width:100%;
     height: 500px;
 }
 .card-detail{
@@ -26,7 +26,13 @@
     margin-left: 0.5em;
 }
 @media screen and (max-width:900px){
-    .card-view{
+    .card{
         flex-direction: column;
+      width:100vw;
+      overflow-x: hidden;
+    }
+    .card-view img{
+        width:100%;
+        height: 200px;
     }
 }
