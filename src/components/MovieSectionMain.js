@@ -44,7 +44,7 @@ if(!isLoading)
         return <MovieSection title={movie.title} movies={movie.movies} key={movie['_id']}/>
     })
 }
-    return (<main className="main">
+    return (<main className="main container">
 {/* <Carousel images={images}/> */}
 <div className="main-movie-section">
 {movieSections}

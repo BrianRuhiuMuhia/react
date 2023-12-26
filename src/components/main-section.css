@@ -4,6 +4,9 @@
     gap:1em;
     background-color: aliceblue;
 }
+.container{
+    max-width: 1440px;
+}
 .main-movie-section{
 display:grid;
 grid-template-columns: auto;
